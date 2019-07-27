@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>records</title>
+</head>
+<body>
+    <ul>
+        <% for(var i=0; i<forms.length; i++) { %>
+            <li>
+                <ul>
+                    <!-- <form>
+                        <label><%= forms[i]._id %></label>
+                        <br><br>
+                        <input type="text" name="name" placeholder="Name" value="<%= forms[i].name %>">
+                        <br><br>
+                        <input type="text" name="email" placeholder="Email" value="<%= forms[i].email %>">
+                        <br><br>
+                        <input type="text" name="subject" placeholder="Subject" value="<%= forms[i].subject %>">
+                        <br><br>
+                        <textarea name="message" placeholder="Message" value="<%= forms[i].message %>"><%= forms[i].message %></textarea>
+                        <br><br>
+                        <a href="./delete/<%= forms[i]._id %>" >Delete</a>
+
+                    </form> -->
+                    <li><%= forms[i]._id %></li>
+                    <li><%= forms[i].name %></li>
+                    <li><%= forms[i].email %></li>
+                    <li><%= forms[i].subject %></li>
+                    <li><%= forms[i].message %></li>
+                    <a href="./delete/<%= forms[i]._id %>" >Delete</a>
+                </ul>
+                <br>
+            </li>
+            
+            <br><br>
+        <% } %>
+        
+      </ul>
+</body>
+</html>

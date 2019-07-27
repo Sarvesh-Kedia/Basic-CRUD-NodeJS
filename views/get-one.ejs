@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>record</title>
+</head>
+<body>
+    <ul>
+        <form action="/update" method="POST">
+            <input name="id" type="hidden" value="<%= forms[0]._id %>"><%= forms[0]._id %>
+            <br><br>
+            <input type="text" name="name" placeholder="Name" value="<%= forms[0].name %>">
+            <br><br>
+            <input type="text" name="email" placeholder="Email" value="<%= forms[0].email %>">
+            <br><br>
+            <input type="text" name="subject" placeholder="Subject" value="<%= forms[0].subject %>">
+            <br><br>
+            <textarea name="message" placeholder="Message" value="<%= forms[0].message %>"><%= forms[0].message %></textarea>
+            <br><br>
+            <button type="submit">update</button>
+            <a href="../delete/<%= forms[0]._id %>" >Delete</a>
+
+        </form>
+    </ul>
+</body>
+</html>
